@@ -3,6 +3,7 @@ use actix_web::{get, App, HttpResponse, HttpServer};
 #[get("/")]
 async fn index() -> HttpResponse {
     HttpResponse::Ok()
+        .header("server", "Actix/v3")
         .content_type("text/html; charset=utf-8")
         .body(
             r#"<!DOCTYPE html>
